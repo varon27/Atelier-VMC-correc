@@ -47,7 +47,7 @@
                         <p class="item-actions">
 
                             <!-- Lien vers la page d'édition, ce dernier doit avoir une indication dans l'url permettant d'identifier quelle citation éditer -->
-                            <a href="#" class="btn btn-primary" role="button">Editer</a>
+                            <a href="index.php?section=edit&id=<?php echo $citation['id']; ?>" class="btn btn-primary" role="button">Editer</a>
 
                             <!-- Lien vers la page de suppression, ce dernier doit avoir une indication dans l'url permettant d'identifier quelle citation supprimer -->
                             <a href="index.php?section=delete&id=<?php echo $citation['id']; ?>" class="btn btn-danger" role="button">Supprimer</a>

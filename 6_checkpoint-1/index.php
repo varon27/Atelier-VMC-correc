@@ -24,7 +24,9 @@ elseif ($_GET['section']=='add') {
 
 // Si le parametre "edit" est défini dans l'url, on appel la fonction du controlleur (kaamelottControler.php) permettant de renvoyer la page d'accueil avec un formulaire de modification de citation
 // Attention, afin de modifier une citation, nous avons besoin de pouvoir l'identifier grâce à son id
-
+elseif ($_GET['section']=='edit' && isset($_GET['id']))  {
+	editCitationAction();
+}
 
 // Si le parametre "delete" est défini dans l'url, on appel la fonction du controlleur (kaamelottControler.php) permettant de supprimer la citation
 // Attention, afin de supprimer une citation, nous avons besoin de pouvoir l'identifier grâce à son id

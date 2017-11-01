@@ -61,10 +61,11 @@ function getCitation($id){
  * @param [string] $date Date de la citation
  * @param [string] $image Image de la citation
  */
-function updateCitation($id, $author, $chapter, $content, $date, $image){
+function editCitation($id, $author, $chapter, $content, $date, $image){
     // On récupère la connection à la BDD
-
+    global $bdd;
     // Requete d'update d'une citation précise en BDD
+     mysqli_query  ($bdd, "UPDATE citation SET author = '$author', chapter= '$chapter', content = '$content', date = '$date', image = '$image'  WHERE id='$id'");
 }
 
 /**
